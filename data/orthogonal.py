@@ -1,4 +1,5 @@
 """Orthogonal matrix sampling (Mezzadri) and state evolution x_{i+1} = U x_i."""
+# paper uses 5x5, uniform over O(n)
 import numpy as np
 
 
