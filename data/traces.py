@@ -1,4 +1,5 @@
 """Interleaved trace generation: segments from different systems + SPLs."""
+# SPL = symbolic punctuation label, redrawn per trace
 from .orthogonal import sample_orthogonal, evolve
 import numpy as np
 
