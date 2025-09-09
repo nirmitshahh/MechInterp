@@ -1,4 +1,5 @@
 """GPT-2 style transformer for next-token prediction on interleaved traces."""
+# mixed vocab (SPLs) + continuous state embeddings
 import math
 import torch
 import torch.nn as nn
