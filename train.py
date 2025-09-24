@@ -1,4 +1,5 @@
 """Train transformer on interleaved traces. MSE on next-state prediction."""
+# context len 251, orthogonal 5x5
 import argparse
 import torch
 from model.transformer import TraceTransformer
