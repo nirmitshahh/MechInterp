@@ -1,4 +1,5 @@
 """Eval MSE at 1-after, 2-after, 3-after query indices."""
+# needle-haystack, then index into continuation
 import argparse
 import torch
 from model.transformer import TraceTransformer
