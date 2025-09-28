@@ -1,10 +1,9 @@
-# mech interp iclr thing
+# Decomposing Prediction Mechanisms for In-Context Recall
 
-implementing "Decomposing Prediction Mechanisms for In-Context Recall" (iclr 2026). toy setup: interleaved linear dyn systems + SPLs, needle-in-haystack, 1-after vs 2-after vs 3-after mse.
+Toy setup: interleaved linear dynamical systems + SPLs, needle-in-haystack, MSE at 1-after / 2-after / 3-after query.
 
-- `data/` orthogonal sys, traces, needle-haystack
-- `model/` gpt2-style transformer
-- `train.py` / `eval.py`
-- `experiments/` misdirection, sync, edge pruning, olmo notes
-
-(keeping this minimal for myself, not for others)
+- `data/` — orthogonal sys (Mezzadri), trace interleaving, needle-haystack (normal / misdirection / sync)
+- `model/` — GPT-2 style transformer over mixed SPL + state sequence
+- `train.py` — MSE next-state, context 251, ckpt every N steps
+- `eval.py` — 1/2/3-after MSE, sweep haystack size N, `--misdirection` / `--sync` for OOD
+- `experiments/` — misdirection run, sync run, edge-pruning stub, OLMo translation notes
