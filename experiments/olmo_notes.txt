@@ -1,0 +1,2 @@
+olmo ICL translation expt (sec 4): eng->spanish, 2-shot, symbolic labels X:/Y: vs Spanish:/English:. 
+compare first-token vs second-token accuracy across checkpoints. use OLMo-2 7B.
