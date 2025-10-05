@@ -13,6 +13,7 @@ def main():
     p.add_argument("--n_layers", type=int, default=4)
     p.add_argument("--vocab_size", type=int, default=64)
     p.add_argument("--steps", type=int, default=100_000)
+    p.add_argument("--save_every", type=int, default=25_000)
     args = p.parse_args()
     model = TraceTransformer(
         vocab_size=args.vocab_size,
