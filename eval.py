@@ -16,6 +16,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--ckpt", required=True)
     p.add_argument("--N", type=int, default=2, help="systems in haystack")
+    p.add_argument("--sweep_N", action="store_true", help="sweep N for fig 3")
     args = p.parse_args()
     ckpt = torch.load(args.ckpt)
     model = TraceTransformer(vocab_size=64, max_len=CONTEXT_LEN)
