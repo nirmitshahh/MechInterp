@@ -111,11 +111,10 @@ def make_sync_trace(
     segments = []
     for k in range(n):
         U = systems[k]
-        # rewind: x_shared = U @ x_{L-1} => x_{L-1} = U.T @ x_shared
-        x_prev = U.T @ x_shared
-        for _ in range(n_obs_per_system - 2):
-            x_prev = U.T @ x_prev
-        x0 = U.T @ x_prev
+        # rewind: want x_{n_obs-1} = x_shared, so x0 = (U.T)^{n_obs-1} @ x_shared
+        x0 = np.array(x_shared, dtype=np.float64)
+        for _ in range(n_obs_per_system - 1):
+            x0 = U.T @ x0
         xs = evolve(x0, U, n_obs_per_system - 1)
         segments.append((spl_pairs[k][0], xs[1:], spl_pairs[k][1]))
 
