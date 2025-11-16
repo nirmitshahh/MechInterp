@@ -4,5 +4,5 @@ implementing "Decomposing Prediction Mechanisms for In-Context Recall" (iclr 202
 
 - `data/` orthogonal sys, traces, needle-haystack
 - `model/` gpt2-style transformer
-- `train.py` / `eval.py` 
-- `experiments/` misdirection, sync ood
+- `train.py` / `eval.py`
+- `experiments/` misdirection, sync, edge pruning, olmo notes
