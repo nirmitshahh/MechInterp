@@ -1,6 +1,0 @@
-OLMo in-context translation expt (paper sec 4):
-- eng->spanish, 2-shot, symbolic labels "X:" / "Y:" vs semantic "Spanish:" / "English:".
-- Compare first-token vs second-token accuracy across OLMo-2 7B checkpoints.
-- Expect: second-token improves earlier; first-token (in-context label use) phase-transitions later.
-- Misdirection to unseen "Z:" label: second-token unchanged, first-token noisy (no right answer).
-- Data: need OLMo checkpoints at various training steps + same 2-shot translation prompts.
