@@ -6,3 +6,5 @@ implementing "Decomposing Prediction Mechanisms for In-Context Recall" (iclr 202
 - `model/` gpt2-style transformer
 - `train.py` / `eval.py`
 - `experiments/` misdirection, sync, edge pruning, olmo notes
+
+(keeping this minimal for myself, not for others)
